@@ -19,18 +19,6 @@ This repository extends the existing implementation; the original Seam Carving a
 
 These extensions implement the optimization approach described in the project presentation. The existing backward and forward energy modes remain available.
 
-## Quick Start
-
-Run from the project root:
-
-```bash
-pip install -r requirements.txt
-pip install -e .
-python -m example.saliency_demo --input "image.png" --width-ratio 0.7 --threshold 0.2
-```
-
-The comparison image is saved to `outputs/saliency_demo/comparison.png`. A larger `--width-ratio` removes fewer seams; a lower `--threshold` protects more regions, including potentially unwanted background areas.
-
 ## Current Results
 
 On the supplied test image, the modified method preserved the face better than the baseline, but the torso remained distorted. Spectral-residual saliency does not identify complete semantic objects, so full subject preservation is not guaranteed.
